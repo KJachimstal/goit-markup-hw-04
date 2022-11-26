@@ -12,6 +12,9 @@
     --buttonColor: #F5F4FA;
     --headerButtonColor: #ECECEC;
     --portfolioBorderColor: #EEEEEE;
+    --socialMediaColor: #AFB1B8;
+    --footersocialMediaBackgroundColor: rgba(255, 255, 255, 0.1);
+    --bannerBackgroundColorGradient: rgba(47, 48, 58, 0.4);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -123,8 +126,10 @@ body {
     gap: 10px;
 }
 
-.menu-contact-item:hover .icon {
-    fill: var(--mainPageColor);;
+.menu-contact-item:hover .icon,
+.menu-contact-item:focus .icon {
+    fill: var(--mainPageColor);
+    ;
 }
 
 .menu-item-active {
@@ -161,6 +166,11 @@ body {
     padding: 60px 0;
 }
 
+.footer .container > ul {
+    display: flex;
+    gap: 70px;
+}
+
 .footer-item:not(:last-child) {
     margin-bottom: 9px;
 }
@@ -181,12 +191,79 @@ body {
     color: var(--whiteColor);
 }
 
+.footer-social_media {
+    width: 206px;
+}
+
+.footer-social_media-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--whiteColor);
+    margin: 12px 0 20px;
+}
+
+.footer-social_media-list {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social_media-icon {
+    fill: var(--whiteColor)
+}
+
+.footer-social_media .footer-social_media-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--whiteColor);
+}
+
+.footer-social_media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--footersocialMediaBackgroundColor);
+}
+
+.footer-social_media-container:hover,
+.footer-social_media-container:focus {
+    cursor: pointer;
+    background-color: var(--mainPageColor);
+}
+
+.footer-social_media-container:hover .footer-social_media-icon,
+.footer-social_media-container:focus .footer-social_media-icon  {
+    fill: var(--whiteColor);
+}
+
 /*-------------------------------------- BANNER STLES --------------------------------------*/
 
 .banner {
+    position: relative;
     background: var(--bannerBackgroundColor);
     padding: 200px 0;
     text-align: center;
+    background-image: url(./../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: 1;
+}
+
+.banner-gradient {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: var(--bannerBackgroundColorGradient);
+    width: 1600px;
+    height: 600px;
+    z-index: -1;
 }
 
 .banner-title {
@@ -226,6 +303,22 @@ body {
 
 .description-item {
     width: 270px;
+}
+
+.description-item-container {
+    width: 270px;
+    height: 120px;
+    background-color: var(--buttonColor);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.description-item-container .icon {
+    width: 65px;
+    height: 70px;
 }
 
 .description-item-subtitle {
@@ -309,6 +402,83 @@ body {
     line-height: 1.18;
     text-align: center;
     color: var(--contactColor);
+    margin-bottom: 16px;
+}
+
+.crew-item-social_media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.crew-item-social_media .crew-item-social_media-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--socialMediaColor);
+}
+
+.crew-item-social_media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.crew-item-social_media-container:hover,
+.crew-item-social_media-container:focus {
+    cursor: pointer;
+    background-color: var(--mainPageColor);
+    fill: var(--whiteColor);
+}
+
+.crew-item-social_media-container:hover .crew-item-social_media-icon,
+.crew-item-social_media-container:focus .crew-item-social_media-icon {
+    fill: var(--whiteColor);
+}
+
+/*-------------------------------------- CLIENTS STLES --------------------------------------*/
+
+.clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--secondaryPageColor);
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    display: flex;
+    gap: 30px;
+}
+
+.clients-list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--socialMediaColor);
+    border-radius: 4px;
+}
+
+.clients-list-container:hover,
+.clients-list-container:focus {
+    border: 1px solid var(--mainPageColor);
+    cursor: pointer;
+}
+
+.clients-list-container:hover .clients-list-logo,
+.clients-list-container:focus .clients-list-logo {
+    fill: var(--mainPageColor);
+}
+
+.clients-list-logo {
+    width: 106px;
+    height: 60px;
+    fill: var(--socialMediaColor);
 }
 
 /*-------------------------------------- PORTFOLIO STLES --------------------------------------*/
@@ -336,6 +506,12 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 .portfolio-item-container {
