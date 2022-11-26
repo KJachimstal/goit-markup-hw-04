@@ -94,16 +94,14 @@ body {
     align-items: center;
 }
 
-.menu a:hover,
-.menu a:focus,
-.menu ul li a:hover,
-.menu ul li a:focus {
-    color: var(--mainPageColor);
-}
-
 .menu-list {
     display: flex;
     gap: 50px;
+}
+
+.menu-list li a:hover,
+.menu-list li a:focus {
+    color: var(--mainPageColor);
 }
 
 .menu-item {
@@ -114,14 +112,19 @@ body {
 }
 
 .menu-contact-list {
-    display: flex;
     margin-left: auto;
-    gap: 50px;
 }
 
 .menu-contact-item {
     color: var(--contactColor);
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-contact-item:hover .icon {
+    fill: var(--mainPageColor);;
 }
 
 .menu-item-active {
