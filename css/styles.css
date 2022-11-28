@@ -126,6 +126,10 @@ body {
     gap: 10px;
 }
 
+.menu-contact-item .icon {
+    fill: var(--contactColor);
+}
+
 .menu-contact-item:hover .icon,
 .menu-contact-item:focus .icon {
     fill: var(--mainPageColor);
@@ -166,7 +170,7 @@ body {
     padding: 60px 0;
 }
 
-.footer .container > ul {
+.footer .container>ul {
     display: flex;
     gap: 70px;
 }
@@ -232,12 +236,11 @@ body {
 
 .footer-social_media-container:hover,
 .footer-social_media-container:focus {
-    cursor: pointer;
     background-color: var(--mainPageColor);
 }
 
 .footer-social_media-container:hover .footer-social_media-icon,
-.footer-social_media-container:focus .footer-social_media-icon  {
+.footer-social_media-container:focus .footer-social_media-icon {
     fill: var(--whiteColor);
 }
 
@@ -248,22 +251,13 @@ body {
     background: var(--bannerBackgroundColor);
     padding: 200px 0;
     text-align: center;
-    background-image: url(./../images/banner.png);
+    background-image: url(./../images/banner.jpg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    z-index: 1;
-}
-
-.banner-gradient {
-    position: absolute;
-    margin: auto;
-    top: 0px;
-    left: 0;
-    right: 0;
-    background-color: var(--bannerBackgroundColorGradient);
+    margin: 0 auto;
+    background-color: linear-gradient(var(--bannerBackgroundColorGradient),
+            var(--bannerBackgroundColorGradient));
     width: 1600px;
     height: 600px;
-    z-index: -1;
 }
 
 .banner-title {
@@ -314,11 +308,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-}
-
-.description-item-container .icon {
-    width: 65px;
-    height: 70px;
 }
 
 .description-item-subtitle {
@@ -412,8 +401,6 @@ body {
 }
 
 .crew-item-social_media .crew-item-social_media-icon {
-    width: 20px;
-    height: 20px;
     fill: var(--socialMediaColor);
 }
 
@@ -428,7 +415,6 @@ body {
 
 .crew-item-social_media-container:hover,
 .crew-item-social_media-container:focus {
-    cursor: pointer;
     background-color: var(--mainPageColor);
     fill: var(--whiteColor);
 }
@@ -467,7 +453,6 @@ body {
 .clients-list-container:hover,
 .clients-list-container:focus {
     border: 1px solid var(--mainPageColor);
-    cursor: pointer;
 }
 
 .clients-list-container:hover .clients-list-logo,
